@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom'
 
 export default class Login extends React.Component {
 
@@ -30,8 +31,8 @@ export default class Login extends React.Component {
 
           </div>
         </form>
-        <a href="#">I forgot my password</a><br/>
-        <a href="" className="text-center">Register a new membership</a>
+        <Link to="/recover">I forgot my password</Link><br/>
+        <Link to="/signup" className="text-center">Register a new membership</Link>
       </div>
 
     );
