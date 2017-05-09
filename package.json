@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0",
     "react": "^15.5.4",
     "react-bootstrap": "^0.31.0",
     "react-dom": "^15.5.4",
@@ -19,7 +20,10 @@
     "build-css": "node-sass src/ -o src/",
     "watch-css": "npm run build-css && node-sass src/ -o src/ --watch --recursive",
     "start-js": "react-scripts start",
-    "start": "npm-run-all -p watch-css start-js",
+    "fontawesome-mkdir": "mkdir ./src/styles/font-awesome",
+    "fontawesome-css": "cp -R node_modules/font-awesome/css ./src/styles/font-awesome/css",
+    "fontawesome-fonts": "cp -R node_modules/font-awesome/fonts ./src/styles/font-awesome/fonts",
+    "start": "npm-run-all -p watch-css start-js fontawesome-mkdir fontawesome-css fontawesome-fonts",
     "build": "npm run build-css && react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"

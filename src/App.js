@@ -6,6 +6,7 @@ import {
 import './App.css';
 import Sign from './scenes/Sign';
 import Home from './scenes/Home';
+import Dashboard from './scenes/Dashboard';
 
 class App extends Component {
   render() {
@@ -16,6 +17,7 @@ class App extends Component {
             <Route path="/signup" component={Sign}/>
             <Route path="/recover" component={Sign}/>
             <Route path="/home" component={Home}/>
+            <Route path="/dashboard" component={Dashboard}/>
           </div>
         </Router>
 

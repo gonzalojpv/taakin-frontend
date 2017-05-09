@@ -17,3 +17,6 @@ yarn-debug.log*
 yarn-error.log*
 
 src/**/*.css
+src/**/*.css.map
+
+src/**/font-awesome/
