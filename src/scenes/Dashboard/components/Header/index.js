@@ -11,7 +11,7 @@ const Header = () => {
       </a>
       <nav className="navbar navbar-static-top">
         <a href="#" className="sidebar-toggle" data-toggle="offcanvas" role="button">
-          <span class="sr-only">Toggle navigation</span>
+          <span className="sr-only">Toggle navigation</span>
         </a>
         <div className="navbar-custom-menu">
           <Breadcrumb>
