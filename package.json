@@ -20,7 +20,7 @@
     "build-css": "node-sass src/ -o src/",
     "watch-css": "npm run build-css && node-sass src/ -o src/ --watch --recursive",
     "start-js": "react-scripts start",
-    "fontawesome-mkdir": "mkdir ./src/styles/font-awesome",
+    "fontawesome-mkdir": "mkdir -p ./src/styles/font-awesome",
     "fontawesome-css": "cp -R node_modules/font-awesome/css ./src/styles/font-awesome/css",
     "fontawesome-fonts": "cp -R node_modules/font-awesome/fonts ./src/styles/font-awesome/fonts",
     "start": "npm-run-all -p watch-css start-js fontawesome-mkdir fontawesome-css fontawesome-fonts",
