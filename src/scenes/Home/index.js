@@ -2,9 +2,10 @@ import React, { Component } from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Sidebar from "./components/Sidebar";
+import Dashboard from "./scenes/Dashboard";
 import './styles.css';
 
-export default class Dashboard extends Component {
+export default class Home extends Component {
 
   constructor( props ) {
     super(props);
@@ -29,7 +30,7 @@ export default class Dashboard extends Component {
           />
         <Sidebar/>
         <div className="content-wrapper">
-          Content
+          <Dashboard/>
         </div>
         <Footer/>
       </div>
