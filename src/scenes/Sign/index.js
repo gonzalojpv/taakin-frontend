@@ -21,7 +21,6 @@ export default class Sign extends React.Component {
           <Route path="/recover" component={ForgotPassword}/>
         </div>
       </Router>
-
     );
   }
 }

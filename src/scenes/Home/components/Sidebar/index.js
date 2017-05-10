@@ -26,21 +26,19 @@ const Sidebar = () => {
           </div>
         </form>
         <ul className="sidebar-menu">
-          <li className="header">MAIN NAVIGATION</li>
+          <li className="header">MENU PRINCIPAL</li>
           <li className="active treeview">
-            <a href="#">
+            <a href="/dashboard">
               <i className="fa fa-dashboard"></i> <span>Dashboard</span>
-              <span className="pull-right-container">
-                <i className="fa fa-angle-left pull-right"></i>
-              </span>
             </a>
-            <ul className="treeview-menu">
-              <li><a href="index.html"><i className="fa fa-circle-o"></i> Dashboard v1</a></li>
-              <li className="active"><a href="index2.html"><i className="fa fa-circle-o"></i> Dashboard v2</a></li>
-            </ul>
           </li>
-          <li><a href="documentation/index.html"><i className="fa fa-book"></i> <span>Documentation</span></a></li>
-            <li className="header">LABELS</li>
+          <li>
+            <a href="/customers">
+              <i className="fa fa-users" aria-hidden="true"></i>
+              <span>Clientes</span>
+            </a>
+          </li>
+          <li className="header">LABELS</li>
           <li><a href="#"><i className="fa fa-circle-o text-red"></i> <span>Important</span></a></li>
           <li><a href="#"><i className="fa fa-circle-o text-yellow"></i> <span>Warning</span></a></li>
           <li><a href="#"><i className="fa fa-circle-o text-aqua"></i> <span>Information</span></a></li>
