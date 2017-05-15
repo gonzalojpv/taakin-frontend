@@ -1,4 +1,5 @@
 import React from "react";
+import TreeviewMenu, { MenuItem } from './../TreeviewMenu';
 import './styles.css';
 import userPhoto from "../../../../images/bahlum.png";
 
@@ -27,17 +28,39 @@ const Sidebar = () => {
         </form>
         <ul className="sidebar-menu">
           <li className="header">MENU PRINCIPAL</li>
-          <li className="active treeview">
-            <a href="/dashboard">
-              <i className="fa fa-dashboard"></i> <span>Dashboard</span>
-            </a>
-          </li>
-          <li>
-            <a href="/customers">
-              <i className="fa fa-users" aria-hidden="true"></i>
-              <span>Clientes</span>
-            </a>
-          </li>
+            <MenuItem
+              slug='dashboard'
+              href='/dashboard'
+              label='Dashboard'
+              cls='fa-dashboard'
+            />
+          <TreeviewMenu
+            title='Clientes'
+            cls='fa-users'
+            items={
+              [
+                { label:'Lista', slug:'ncustomers', href:'/customers', cls:'fa-circle-o' },
+                { label:'Nuevo', slug:'add-customer', href:'', cls:'fa-user-plus' }
+              ]
+            }
+          />
+          <TreeviewMenu
+            title='Demo'
+            cls='fa-envelope-open'
+            items={
+              [
+                { label:'Agregar', slug:'r-demo', href:'', cls:'fa-circle-o' },
+                { label:'A', slug:'r-demo', href:'', cls:'fa-circle-o' },
+                { label:'B', slug:'t-demo', href:'', cls:'fa-circle-o' },
+              ]
+            }
+          />
+          <MenuItem
+            slug='demo-1'
+            href=''
+            label='DEmo1'
+            cls='fa-user'
+          />
           <li className="header">LABELS</li>
           <li><a href="#"><i className="fa fa-circle-o text-red"></i> <span>Important</span></a></li>
           <li><a href="#"><i className="fa fa-circle-o text-yellow"></i> <span>Warning</span></a></li>

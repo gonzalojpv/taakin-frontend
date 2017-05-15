@@ -1,0 +1,13 @@
+@import "../../../../styles/variables.scss";
+
+.treeview {
+  &.active {
+    & > a {
+      color: $clouds !important;
+    }
+  }
+}
+
+.sidebar-menu li.active > .treeview-menu {
+  display: block;
+}
