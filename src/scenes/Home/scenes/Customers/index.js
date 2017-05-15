@@ -1,18 +1,28 @@
 import React, { Component } from "react";
-import CustomerList from "./components/CustomerList";
+import List from './scenes/List';
 
-export default class Customers extends Component {
+class Customers extends Component {
 
   render() {
     return(
-      <section className="content">
-        <div className="row">
-          <div className="col-sm-12">
-            <CustomerList/>
-          </div>
-        </div>
-      </section>
-
+      <div>
+        <section className="content-header">
+          <h1>
+            Mis Clientes
+            <small>Ordenado por ultimas actualizaciones</small>
+          </h1>
+          <ol className="breadcrumb">
+            <li><a href="#"><i className="fa fa-dashboard"></i> Dashboard</a></li>
+            <li><a href="#">Clientes</a></li>
+            <li className="active">Lista</li>
+          </ol>
+        </section>
+        <section className="content">
+          <List/>
+        </section>
+      </div>
     );
   }
 }
+
+export default Customers;

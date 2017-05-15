@@ -1,10 +1,31 @@
 import React from "react";
 
-const CustomerList = ( props ) => {
+const CustomerItem = ({ customer }) => {
   return(
-    <div className="box">
+    <tr>
+      <td>{customer.id}</td>
+      <td>{customer.name + ' ' + customer.first_name + ' ' + customer.last_name}</td>
+      <td>{customer.phone}</td>
+      <td>{customer.address}</td>
+      <td>{customer.cp}</td>
+      <td>
+        $1000
+      </td>
+      <td><span className="badge bg-green">90%</span></td>
+    </tr>
+  );
+}
+
+const CustomerList = ({ customers }) => {
+
+  const customersBoby = customers.map( (customer) => {
+    return ( <CustomerItem customer={customer} key={customer.id} /> )
+  });
+
+  return(
+    <div className="box box-primary">
       <div className="box-header">
-        <h3 className="box-title">Simple Full Width Table</h3>
+        <h3 className="box-title">Mis deudores</h3>
 
         <div className="box-tools">
           <ul className="pagination pagination-sm no-margin pull-right">
@@ -22,19 +43,15 @@ const CustomerList = ( props ) => {
         <tr>
           <th>#</th>
           <th>Nombre</th>
+          <th>Teléfono</th>
+          <th>Dirección</th>
+          <th>C.P</th>
           <th>Prestamo</th>
           <th>Porcentaje</th>
         </tr>
         </thead>
         <tbody>
-        <tr>
-          <td>4.</td>
-          <td>Fix and squish bugs</td>
-          <td>
-            $1000
-          </td>
-          <td><span className="badge bg-green">90%</span></td>
-        </tr>
+          {customersBoby}
         </tbody>
 
 
