@@ -1,10 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { NavLink } from 'react-router-dom';
 import './styles.css';
 
 export const MenuItem = ( props ) => {
   return(
-    <li><a href={ props.href }><i className={ 'fa ' + props.cls }></i>{ props.label }</a></li>
+    <li>
+      <NavLink
+        to={props.href}
+        activeClassName='active'
+      >
+        <i className={ 'fa ' + props.cls }></i>{ props.label }
+      </NavLink>
+    </li>
   );
 }
 

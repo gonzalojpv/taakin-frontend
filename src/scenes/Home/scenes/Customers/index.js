@@ -1,7 +1,15 @@
 import React, { Component } from "react";
+import { Route } from 'react-router-dom';
 import List from './scenes/List';
+import AddCustomer from './scenes/AddCustomer';
 
 class Customers extends Component {
+
+  constructor( props ) {
+    super( props );
+
+    console.log(this.props.match);
+  }
 
   render() {
     return(
@@ -18,7 +26,8 @@ class Customers extends Component {
           </ol>
         </section>
         <section className="content">
-          <List/>
+          <Route path={`${this.props.match.url}/new`} component={AddCustomer}/>
+          <Route exact path={this.props.match.url} component={List}/>
         </section>
       </div>
     );

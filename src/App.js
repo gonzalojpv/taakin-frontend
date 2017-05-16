@@ -15,11 +15,14 @@ class App extends Component {
         <Router>
           <Provider store={store}>
             <div className="App">
-              <Route exact path="/" component={Sign}/>
-              <Route path="/signup" component={Sign}/>
-              <Route path="/recover" component={Sign}/>
-              <Route path="/dashboard" component={Home}/>
-              <Route path="/customers" component={Home}/>
+                <Route exact path="/" component={Sign}/>
+                <Route path="/signup" component={Sign}/>
+                <Route path="/recover" component={Sign}/>
+                <Route path="/dashboard" component={Home}/>
+                <Route path="/customers" component={Home}/>
+                <Route render={()=> {
+                    return <p>Not Found</p>
+                }}/>
             </div>
           </Provider>
         </Router>

@@ -39,8 +39,8 @@ const Sidebar = () => {
             cls='fa-users'
             items={
               [
-                { label:'Lista', slug:'ncustomers', href:'/customers', cls:'fa-circle-o' },
-                { label:'Nuevo', slug:'add-customer', href:'', cls:'fa-user-plus' }
+                { label:'Lista', slug:'customers', href:'/customers', cls:'fa-circle-o' },
+                { label:'Nuevo', slug:'add-customer', href:'/customers/new', cls:'fa-user-plus' }
               ]
             }
           />
@@ -49,7 +49,7 @@ const Sidebar = () => {
             cls='fa-envelope-open'
             items={
               [
-                { label:'Agregar', slug:'r-demo', href:'', cls:'fa-circle-o' },
+                { label:'Agregar', slug:'1-demo', href:'', cls:'fa-circle-o' },
                 { label:'A', slug:'r-demo', href:'', cls:'fa-circle-o' },
                 { label:'B', slug:'t-demo', href:'', cls:'fa-circle-o' },
               ]

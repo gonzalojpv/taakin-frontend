@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import {
-  BrowserRouter as Router,
-  Route
+  Route,
+  Switch
 } from 'react-router-dom';
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -29,19 +29,19 @@ export default class Home extends Component {
 
   render() {
     return(
-      <Router>
-        <div className={ 'wrapper ' + this.state.toggle}>
-          <Header
-            toggleSidebar={this.toggleSidebar.bind(this)}
-            />
-          <Sidebar/>
-          <div className="content-wrapper">
+      <div className={ 'wrapper ' + this.state.toggle}>
+        <Header
+          toggleSidebar={this.toggleSidebar.bind(this)}
+          />
+        <Sidebar/>
+        <div className="content-wrapper">
+          <Switch>
             <Route exact path="/dashboard" component={Dashboard}/>
-            <Route exact path="/customers" component={Customers}/>
-          </div>
-          <Footer/>
+            <Route path="/customers" component={Customers}/>
+          </Switch>
         </div>
-      </Router>
+        <Footer/>
+      </div>
     );
   }
 }
