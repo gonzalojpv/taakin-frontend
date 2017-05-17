@@ -20,9 +20,6 @@ class App extends Component {
                 <Route path="/recover" component={Sign}/>
                 <Route path="/dashboard" component={Home}/>
                 <Route path="/customers" component={Home}/>
-                <Route render={()=> {
-                    return <p>Not Found</p>
-                }}/>
             </div>
           </Provider>
         </Router>

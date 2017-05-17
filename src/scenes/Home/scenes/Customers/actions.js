@@ -9,3 +9,11 @@ export function fetchCustomers( service = new CustomerService() ) {
 
   }
 }
+
+export function newCustomer() {
+  return dispatch => {
+    return dispatch({
+      type: 'NEW_CUSTOMER'
+    })
+  }
+}

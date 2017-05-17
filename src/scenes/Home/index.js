@@ -38,6 +38,9 @@ export default class Home extends Component {
           <Switch>
             <Route exact path="/dashboard" component={Dashboard}/>
             <Route path="/customers" component={Customers}/>
+            <Route render={()=> {
+              return <p>Not Found</p>
+            }}/>
           </Switch>
         </div>
         <Footer/>

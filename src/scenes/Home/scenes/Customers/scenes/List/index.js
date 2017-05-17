@@ -21,7 +21,7 @@ class List extends React.Component {
 
 }
 
-// Make contacts  array available in  props
+// Make customer  array available in  props
 function mapStateToProps(state) {
   return {
     customers : state.Home.customerStore.customers,

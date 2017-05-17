@@ -15,6 +15,19 @@ export default ( state=defaultState, action={} ) => {
         customers: action.payload
       }
     }
+    case 'NEW_CUSTOMER': {
+      return {
+        ...state,
+        contact: {name:{}}
+      }
+    }
+
+    case 'SAVE_CUSTOMER_PENDING': {
+      return {
+        ...state,
+        loading: true
+      }
+    }
     default:
       return state;
 
