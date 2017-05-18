@@ -2,7 +2,7 @@ export class Customer {
   id: number;
   name: string = '';
   first_name: string = '';
-  last_nane: string = '';
+  last_name: string = '';
   cp: string = '';
   phone: string = '';
   email: string;
