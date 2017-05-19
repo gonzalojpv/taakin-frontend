@@ -43,6 +43,15 @@ export class CustomerService extends React.Component {
       .then( response => response.data );
   }
 
+  update( customer ) {
+
+    const url = `${this.apiUrl}${customer.id}`;
+    let params = this.serialize( customer );
+
+   return axios.put( url, params,  { 'headers': this.headers } )
+     .then( () => customer );
+  }
+
   /**
   * Serializes the form element so it can be passed to the back end through the url.
   * The objects properties are the keys and the objects values are the values.

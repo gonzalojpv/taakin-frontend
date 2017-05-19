@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Route } from 'react-router-dom';
 import List from './scenes/List';
 import AddCustomer from './scenes/AddCustomer';
+import Detail from './scenes/Detail';
 
 class Customers extends Component {
 
@@ -21,6 +22,7 @@ class Customers extends Component {
         </section>
         <section className="content">
           <Route path={`${this.props.match.url}/new`} component={AddCustomer}/>
+          <Route path={`${this.props.match.url}/detail/:id`} component={Detail}/>
           <Route exact path={this.props.match.url} component={List}/>
         </section>
       </div>

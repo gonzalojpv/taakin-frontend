@@ -12,7 +12,7 @@ export function fetchCustomers() {
   }
 }
 
-export function fetchCustomer(_id ) {
+export function fetchCustomer( _id ) {
   return dispatch => {
     return dispatch({
       type:'FETCH_CUSTOMER',
@@ -29,11 +29,20 @@ export function newCustomer() {
   }
 }
 
-export function saveCustomer(customer, service = new CustomerService() ) {
+export function saveCustomer( customer ) {
   return dispatch => {
     return dispatch({
       type: 'SAVE_CUSTOMER',
-      payload: service.create(customer)
+      payload: request.create( customer )
     });
+  }
+}
+
+export function updateCustomer( customer ) {
+  return dispatch => {
+    return dispatch({
+      type: 'UPDATE_CUSTOMER',
+      payload: request.update( customer )
+    })
   }
 }

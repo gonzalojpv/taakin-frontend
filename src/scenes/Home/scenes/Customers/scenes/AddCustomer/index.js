@@ -1,9 +1,8 @@
 import React from "react";
-import { Redirect } from 'react-router';
 import { SubmissionError } from 'redux-form';
 import { connect } from 'react-redux';
 import CustomerForm from './../../components/Form';
-import { newCustomer, fetchCustomer, saveCustomer } from "./../../actions";
+import { newCustomer, fetchCustomer, saveCustomer, updateCustomer } from "./../../actions";
 
 class AddCustomer extends React.Component {
 
@@ -22,23 +21,23 @@ class AddCustomer extends React.Component {
       this.props.fetchCustomer( _id );
     else
       this.props.newCustomer();
-
-    console.log(this.props.customer);
   }
 
   submit = ( customer ) => {
-    console.log('Submit');
 
     if ( customer.id ) {
-
+      return this.props.updateCustomer( customer )
+        .then(response => this.setState({ redirect:true }))
+        .catch(err => {
+          throw new SubmissionError(this.props.errors)
+        });
     }
     else {
-      console.log( customer );
       return this.props.saveCustomer(customer)
         .then(response => this.setState({ redirect:true }))
         .catch(err => {
-         throw new SubmissionError(this.props.errors)
-       });
+          throw new SubmissionError(this.props.errors)
+        });
     }
   }
 
@@ -46,18 +45,13 @@ class AddCustomer extends React.Component {
     return(
       <div className="row">
         <div className="col-md-6" >
-          {
-            this.state.redirect ?
-            <Redirect to="/customers" /> :
-            <CustomerForm
-              title='Nuevo Cliente'
-              customer={this.props.customer}
-              loading={this.props.loading}
-              onSubmit={this.submit}
-            />
-          }
-
-          </div>
+          <CustomerForm
+            title='Nuevo Cliente'
+            customer={this.props.customer}
+            loading={this.props.loading}
+            onSubmit={this.submit}
+          />
+        </div>
       </div>
     );
   }
@@ -73,4 +67,4 @@ function mapStateToProps(state) {
   }
 }
 
-export default connect( mapStateToProps, { newCustomer, fetchCustomer, saveCustomer } )(AddCustomer);
+export default connect( mapStateToProps, { newCustomer, fetchCustomer, saveCustomer, updateCustomer } )(AddCustomer);

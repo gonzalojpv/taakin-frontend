@@ -79,6 +79,33 @@ export default ( state=defaultState, action={} ) => {
         loading: false
       }
     }
+    case 'UPDATE_CUSTOMER_PENDING': {
+      return {
+        ...state,
+        loading: true
+      }
+    }
+
+    case 'UPDATE_CUSTOMER_FULFILLED': {
+      const customer = action.payload.data;
+      return {
+        ...state,
+        customers: state.customers.map(item => item._id === customer.id ? customer : item),
+        errors: {},
+        loading: false
+      }
+    }
+
+    case 'UPDATE_CUSTOMER_REJECTED': {
+      const data = action.payload.response.data;
+      const { name, first_name, last_name, phone, address  } = data.errors;
+      const errors = { global: data.message, name, first_name, last_name, phone, address };
+      return {
+        ...state,
+        errors: errors,
+        loading: false
+      }
+    }
     default:
       return state;
 

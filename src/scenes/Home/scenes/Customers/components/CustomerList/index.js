@@ -1,6 +1,9 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 
 const CustomerItem = ({ customer }) => {
+  
+  const url = `${'/customers/detail/'}${customer.id}`;
   return(
     <tr>
       <td>{customer.id}</td>
@@ -8,10 +11,7 @@ const CustomerItem = ({ customer }) => {
       <td>{customer.phone}</td>
       <td>{customer.address}</td>
       <td>{customer.cp}</td>
-      <td>
-        $1000
-      </td>
-      <td><span className="badge bg-green">90%</span></td>
+      <td><Link to={url}>Ver</Link></td>
     </tr>
   );
 }
@@ -46,8 +46,7 @@ const CustomerList = ({ customers }) => {
           <th>Teléfono</th>
           <th>Dirección</th>
           <th>C.P</th>
-          <th>Prestamo</th>
-          <th>Porcentaje</th>
+          <th></th>
         </tr>
         </thead>
         <tbody>
