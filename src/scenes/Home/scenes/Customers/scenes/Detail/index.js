@@ -20,9 +20,7 @@ class Detail extends React.Component {
     return(
       <Row>
         <Col sm={3}>
-          <div className="box box-primary">
-            <Card/>
-          </div>
+          <Card customer={this.props.customer} />
           <BoxInfo customer={this.props.customer} />
         </Col>
         <Col sm={9}>
