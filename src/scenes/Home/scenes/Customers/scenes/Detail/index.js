@@ -1,7 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Col, Row } from 'react-bootstrap';
+import { Col, Row, Tabs, Tab } from 'react-bootstrap';
 import { fetchCustomer } from "./../../actions";
+import BoxInfo from './../../components/BoxInfo';
+import Card from './../../components/Card';
+import TimeLine from './../../components/TimeLine';
 
 class Detail extends React.Component {
 
@@ -16,8 +19,19 @@ class Detail extends React.Component {
 
     return(
       <Row>
-        <Col sm={12}>
-          Detail
+        <Col sm={3}>
+          <div className="box box-primary">
+            <Card/>
+          </div>
+          <div className="box box-primary">
+            <BoxInfo/>
+          </div>
+        </Col>
+        <Col sm={9}>
+          <Tabs defaultActiveKey={2} id="uncontrolled-tab-example">
+            <Tab eventKey={1} title="TimeLine"><TimeLine/></Tab>
+            <Tab eventKey={2} title="Setting">Tab 2 content</Tab>
+          </Tabs>
         </Col>
       </Row>
     );
