@@ -23,9 +23,7 @@ class Detail extends React.Component {
           <div className="box box-primary">
             <Card/>
           </div>
-          <div className="box box-primary">
-            <BoxInfo/>
-          </div>
+          <BoxInfo customer={this.props.customer} />
         </Col>
         <Col sm={9}>
           <Tabs defaultActiveKey={2} id="uncontrolled-tab-example">
