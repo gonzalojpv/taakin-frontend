@@ -24,7 +24,7 @@ class Detail extends React.Component {
           <BoxInfo customer={this.props.customer} />
         </Col>
         <Col sm={9}>
-          <Tabs defaultActiveKey={2} id="uncontrolled-tab-example">
+          <Tabs defaultActiveKey={1} id="uncontrolled-tab-example">
             <Tab eventKey={1} title="TimeLine"><TimeLine/></Tab>
             <Tab eventKey={2} title="Setting">Tab 2 content</Tab>
           </Tabs>

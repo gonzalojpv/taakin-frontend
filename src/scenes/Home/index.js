@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 import Sidebar from "./components/Sidebar";
 import Dashboard from "./scenes/Dashboard";
 import Customers from "./scenes/Customers";
+import Amounts from "./scenes/Amounts";
 import './styles.css';
 
 export default class Home extends Component {
@@ -38,6 +39,7 @@ export default class Home extends Component {
           <Switch>
             <Route exact path="/dashboard" component={Dashboard}/>
             <Route path="/customers" component={Customers}/>
+            <Route path="/amounts" component={Amounts}/>
             <Route render={()=> {
               return <p>Not Found</p>
             }}/>

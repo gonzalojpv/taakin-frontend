@@ -20,6 +20,7 @@ class App extends Component {
                 <Route path="/recover" component={Sign}/>
                 <Route path="/dashboard" component={Home}/>
                 <Route path="/customers" component={Home}/>
+                <Route path="/amounts" component={Home}/>
             </div>
           </Provider>
         </Router>

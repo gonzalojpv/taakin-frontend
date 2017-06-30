@@ -39,19 +39,18 @@ const Sidebar = () => {
             cls='fa-users'
             items={
               [
-                { label:'Lista', slug:'customers', href:'/customers', cls:'fa-circle-o' },
-                { label:'Nuevo', slug:'add-customer', href:'/customers/new', cls:'fa-user-plus' }
+                { label:'Nuevo', slug:'add-customer', href:'/customers/new', cls:'fa-user-plus' },
+                { label:'Lista', slug:'customers', href:'/customers', cls:'fa-th-list' }
               ]
             }
           />
           <TreeviewMenu
-            title='Demo'
-            cls='fa-envelope-open'
+            title='Montos'
+            cls='fa-usd'
             items={
               [
-                { label:'Agregar', slug:'1-demo', href:'', cls:'fa-circle-o' },
-                { label:'A', slug:'r-demo', href:'', cls:'fa-circle-o' },
-                { label:'B', slug:'t-demo', href:'', cls:'fa-circle-o' },
+                { label:'Nuevo', slug:'add-amount', href:'/amounts/new', cls:'fa-plus-square' },
+                { label:'Lista', slug:'list-amount', href:'/amounts', cls:'fa-th-list' }
               ]
             }
           />
