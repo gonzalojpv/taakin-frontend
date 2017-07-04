@@ -52,7 +52,7 @@ export default ( state=defaultState, action={} ) => {
         loading: false
       }
     }
-    case 'SAVE_CONTACT_REJECTED': {
+    case 'SAVE_CUSTOMER_REJECTED': {
       const data = action.payload.response.data;
       // convert feathers error formatting to match client-side error formatting
       const { name, first_name, last_name, phone, address } = data.errors;

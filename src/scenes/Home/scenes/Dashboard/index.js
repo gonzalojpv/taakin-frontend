@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import InfoBox from "./components/InfoBox";
+import AddLoan from "./../../components/AddLoan";
 import './styles.css';
 
 export default class Dashboard extends Component {
@@ -18,6 +19,11 @@ export default class Dashboard extends Component {
           </ol>
         </section>
         <div className="content">
+          <div className="row">
+            <div className="col-lg-3 col-xs-6">
+              <AddLoan/>
+            </div>
+          </div>
           <div className="row">
             <div className="col-md-3 col-sm-6 col-xs-12">
               <InfoBox

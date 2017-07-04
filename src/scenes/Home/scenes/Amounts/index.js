@@ -1,6 +1,6 @@
 import React from "react";
 import { Route } from 'react-router-dom';
-import List from './components/List';
+import List from './scenes/List';
 import Form from './components/Form';
 
 
