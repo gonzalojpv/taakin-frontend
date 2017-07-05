@@ -163,7 +163,7 @@ class AddLoan extends React.Component {
           </a>
         </div>
         <a onClick={ this.open.bind(this) } className="small-box-footer" >
-          <i className="fa fa-arrow-circle-right"></i> Nuevo Prestamo
+          <i className="fa fa-plus" aria-hidden="true"></i> Nuevo Prestamo
         </a>
         <ModalForm
           show={this.state.showModal}

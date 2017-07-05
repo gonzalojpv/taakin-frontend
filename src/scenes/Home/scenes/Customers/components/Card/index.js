@@ -6,7 +6,7 @@ const Card = ( props ) => {
 
   const { customer } = props;
 
-  let fullname = `${customer.name} ${customer.firt_name} ${customer.last_name}`;
+  let fullname = `${customer.name} ${customer.first_name} ${customer.last_name}`;
 
 
   return(

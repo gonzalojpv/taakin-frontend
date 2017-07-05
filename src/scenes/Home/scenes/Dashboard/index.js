@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import InfoBox from "./components/InfoBox";
 import AddLoan from "./../../components/AddLoan";
+import ModalAddCustomer from "./../../components/ModalAddCustomer";
 import './styles.css';
 
 export default class Dashboard extends Component {
@@ -20,6 +21,9 @@ export default class Dashboard extends Component {
         </section>
         <div className="content">
           <div className="row">
+            <div className="col-lg-3 col-xs-6">
+              <ModalAddCustomer/>
+            </div>
             <div className="col-lg-3 col-xs-6">
               <AddLoan/>
             </div>
