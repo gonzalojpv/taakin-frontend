@@ -62,6 +62,9 @@ class ModalForm extends React.Component {
                 <Col sm={6}>
                   <Field id="amount" name="amount" type="number" component={this.renderField} label="Monto"/>
                 </Col>
+                <Col sm={6}>
+                  <Field id="date" name="start_date" type="date" component={this.renderField} label="Fecha de inicio"/>
+                </Col>
               </Row>
 
             </Modal.Body>
